@@ -3470,9 +3470,9 @@ struct NOVTABLE IBindableIterable_tF6BD0C070562CD9C91E3C1B1A5F4667E9C3C74A8 : Il
 struct NOVTABLE IBindableIterator_tD7550F1144CFBE58090050457A2BE92B1CAEABBB : Il2CppIInspectable
 {
 	static const Il2CppGuid IID;
-	virtual il2cpp_hresult_t STDCALL IBindableIterator_get_Current_m925423E867873FA1E4ED0804031A06C0852D7A54(Il2CppIInspectable** comReturnValue) = 0;
-	virtual il2cpp_hresult_t STDCALL IBindableIterator_get_HasCurrent_m4DAEC47CD0F9FD8C8102793367E1977C7F759FFA(bool* comReturnValue) = 0;
-	virtual il2cpp_hresult_t STDCALL IBindableIterator_MoveNext_m4FB28C3D3863BB69F92027EE724CA8BE91833706(bool* comReturnValue) = 0;
+	virtual il2cpp_hresult_t STDCALL IBindableIterator_get_Current_m53A4B6F2DECC874908CA9335785007A39D6FC93E(Il2CppIInspectable** comReturnValue) = 0;
+	virtual il2cpp_hresult_t STDCALL IBindableIterator_get_HasCurrent_m4FD33F7F3A504A8F4A4C7DE3965342B19EA3A974(bool* comReturnValue) = 0;
+	virtual il2cpp_hresult_t STDCALL IBindableIterator_MoveNext_mA70DABC057BE3ED9199D4E0E6FEBDF6ED3570A75(bool* comReturnValue) = 0;
 };
 // Windows.UI.Xaml.Interop.IBindableVector
 struct NOVTABLE IBindableVector_tC070A96258CD93818901E9B7808E1A8EFB64B7EC : Il2CppIInspectable
@@ -3509,7 +3509,7 @@ struct NOVTABLE IBuffer_t33ECA22EB7DDA1EF333215FF8109DC736AF11FBC : Il2CppIInspe
 struct NOVTABLE IClosable_t30CA7D2BE598B3BD6AA57CE9DF977DB51540B953 : Il2CppIInspectable
 {
 	static const Il2CppGuid IID;
-	virtual il2cpp_hresult_t STDCALL IClosable_Close_m39D5256F4888029EB959CFA74DD76EB47B570871() = 0;
+	virtual il2cpp_hresult_t STDCALL IClosable_Close_m7DE2119A960C4E3898E6E5D03245D047BF113999() = 0;
 };
 // Windows.Storage.Streams.IContentTypeProvider
 struct NOVTABLE IContentTypeProvider_t3F61CA557BE1A863D42C782E1C7336DB48B431B3 : Il2CppIInspectable
@@ -6332,9 +6332,9 @@ struct NOVTABLE IAsyncInfo_tF2AAFC1727C480C2FB5E3E8FA00BF9CB3646F2E4 : Il2CppIIn
 {
 	static const Il2CppGuid IID;
 	virtual il2cpp_hresult_t STDCALL IAsyncInfo_get_Id_m3863CB02C1CDBA1050DAAE7311DF9F3E8BCD9D74(uint32_t* comReturnValue) = 0;
-	virtual il2cpp_hresult_t STDCALL IAsyncInfo_get_Status_m7E8AA78C1877123B35EAFA58FEF0FA86D8A97583(int32_t* comReturnValue) = 0;
-	virtual il2cpp_hresult_t STDCALL IAsyncInfo_get_ErrorCode_m37ACAD97746ABA13006C88EDF582C3B73B68D806(int32_t* comReturnValue) = 0;
-	virtual il2cpp_hresult_t STDCALL IAsyncInfo_Cancel_m53FE58D39AE61799A01EE7ECB9429CB3EE01EEFE() = 0;
+	virtual il2cpp_hresult_t STDCALL IAsyncInfo_get_Status_m9393658D0FD28BE7960FBB531A31A1E1CB106F80(int32_t* comReturnValue) = 0;
+	virtual il2cpp_hresult_t STDCALL IAsyncInfo_get_ErrorCode_m0C4F0079B788C88A5A572A827AAACA0B3BB233C5(int32_t* comReturnValue) = 0;
+	virtual il2cpp_hresult_t STDCALL IAsyncInfo_Cancel_m55A00D21BF943DA94D606044A66295FEF77139EE() = 0;
 	virtual il2cpp_hresult_t STDCALL IAsyncInfo_Close_mD8F3D2C7103B340A9FF16F58333E33643F552635() = 0;
 };
 // Windows.Graphics.Holographic.IHolographicCameraPose
@@ -18256,6 +18256,10 @@ IL2CPP_EXTERN_C void LightBakingOutput_t4F4130B900C21B6DADEF7D2AEAB2F120DCC84553
 IL2CPP_EXTERN_C void LightBakingOutput_t4F4130B900C21B6DADEF7D2AEAB2F120DCC84553_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
 IL2CPP_EXTERN_C void LightBakingOutput_t4F4130B900C21B6DADEF7D2AEAB2F120DCC84553_marshal_pinvoke_cleanup(void* marshaledStructure);
 IL2CPP_EXTERN_C_CONST RuntimeType LightBakingOutput_t4F4130B900C21B6DADEF7D2AEAB2F120DCC84553_0_0_0;
+IL2CPP_EXTERN_C void LightProbes_t32F17E0994042933C3CECAAD32AC3A5D3BB50284_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
+IL2CPP_EXTERN_C void LightProbes_t32F17E0994042933C3CECAAD32AC3A5D3BB50284_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
+IL2CPP_EXTERN_C void LightProbes_t32F17E0994042933C3CECAAD32AC3A5D3BB50284_marshal_pinvoke_cleanup(void* marshaledStructure);
+IL2CPP_EXTERN_C_CONST RuntimeType LightProbes_t32F17E0994042933C3CECAAD32AC3A5D3BB50284_0_0_0;
 IL2CPP_EXTERN_C void LinearElasticExtent_t9411B8C7DE2FD48A1286BB68D419F48B4A2640E5_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
 IL2CPP_EXTERN_C void LinearElasticExtent_t9411B8C7DE2FD48A1286BB68D419F48B4A2640E5_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
 IL2CPP_EXTERN_C void LinearElasticExtent_t9411B8C7DE2FD48A1286BB68D419F48B4A2640E5_marshal_pinvoke_cleanup(void* marshaledStructure);
@@ -19726,7 +19730,7 @@ IL2CPP_EXTERN_C void EventCacheKey_t12702AEDF54C3DF6DAFF437A04ACE47ACEF1D639_mar
 IL2CPP_EXTERN_C void EventCacheKey_t12702AEDF54C3DF6DAFF437A04ACE47ACEF1D639_marshal_pinvoke_cleanup(void* marshaledStructure);
 IL2CPP_EXTERN_C_CONST RuntimeType EventCacheKey_t12702AEDF54C3DF6DAFF437A04ACE47ACEF1D639_0_0_0;
 IL2CPP_EXTERN_C Il2CppInteropData g_Il2CppInteropData[];
-Il2CppInteropData g_Il2CppInteropData[6165] = 
+Il2CppInteropData g_Il2CppInteropData[6166] = 
 {
 	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_U3CGetEnumeratorU3Ed__1_tA6B740F8594E3EA51948979FC3602C8B4608C6FD, NULL, &U3CGetEnumeratorU3Ed__1_tA6B740F8594E3EA51948979FC3602C8B4608C6FD_0_0_0 } /* System.Linq.OrderedEnumerable`1/<GetEnumerator>d__1<System.Collections.Generic.KeyValuePair`2<System.Type,Microsoft.MixedReality.Toolkit.IMixedRealityService>> */,
 	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_U3CGetEnumeratorU3Ed__1_t6FD4DB4BBE45786CF4639008AAA2C71A2D808596, NULL, &U3CGetEnumeratorU3Ed__1_t6FD4DB4BBE45786CF4639008AAA2C71A2D808596_0_0_0 } /* System.Linq.OrderedEnumerable`1/<GetEnumerator>d__1<UnityEngine.TextCore.Glyph> */,
@@ -25406,6 +25410,7 @@ Il2CppInteropData g_Il2CppInteropData[6165] =
 	{ NULL, KeywordAndResponse_t464DFAA58464329B9C85EFACA2132BE140F3309F_marshal_pinvoke, KeywordAndResponse_t464DFAA58464329B9C85EFACA2132BE140F3309F_marshal_pinvoke_back, KeywordAndResponse_t464DFAA58464329B9C85EFACA2132BE140F3309F_marshal_pinvoke_cleanup, NULL, NULL, &KeywordAndResponse_t464DFAA58464329B9C85EFACA2132BE140F3309F_0_0_0 } /* Microsoft.MixedReality.Toolkit.Input.KeywordAndResponse */,
 	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_KeywordRecognizer_t118BF0FCD4DEE469BD742508DBB9AA9BDED9A15F, NULL, &KeywordRecognizer_t118BF0FCD4DEE469BD742508DBB9AA9BDED9A15F_0_0_0 } /* UnityEngine.Windows.Speech.KeywordRecognizer */,
 	{ NULL, LightBakingOutput_t4F4130B900C21B6DADEF7D2AEAB2F120DCC84553_marshal_pinvoke, LightBakingOutput_t4F4130B900C21B6DADEF7D2AEAB2F120DCC84553_marshal_pinvoke_back, LightBakingOutput_t4F4130B900C21B6DADEF7D2AEAB2F120DCC84553_marshal_pinvoke_cleanup, NULL, NULL, &LightBakingOutput_t4F4130B900C21B6DADEF7D2AEAB2F120DCC84553_0_0_0 } /* UnityEngine.LightBakingOutput */,
+	{ NULL, LightProbes_t32F17E0994042933C3CECAAD32AC3A5D3BB50284_marshal_pinvoke, LightProbes_t32F17E0994042933C3CECAAD32AC3A5D3BB50284_marshal_pinvoke_back, LightProbes_t32F17E0994042933C3CECAAD32AC3A5D3BB50284_marshal_pinvoke_cleanup, NULL, NULL, &LightProbes_t32F17E0994042933C3CECAAD32AC3A5D3BB50284_0_0_0 } /* UnityEngine.LightProbes */,
 	{ NULL, LinearElasticExtent_t9411B8C7DE2FD48A1286BB68D419F48B4A2640E5_marshal_pinvoke, LinearElasticExtent_t9411B8C7DE2FD48A1286BB68D419F48B4A2640E5_marshal_pinvoke_back, LinearElasticExtent_t9411B8C7DE2FD48A1286BB68D419F48B4A2640E5_marshal_pinvoke_cleanup, NULL, NULL, &LinearElasticExtent_t9411B8C7DE2FD48A1286BB68D419F48B4A2640E5_0_0_0 } /* Microsoft.MixedReality.Toolkit.Experimental.Physics.LinearElasticExtent */,
 	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_ListDictionaryInternal_t41BC521E191A070D69C4D98B996314424BBFDA8A, NULL, &ListDictionaryInternal_t41BC521E191A070D69C4D98B996314424BBFDA8A_0_0_0 } /* System.Collections.ListDictionaryInternal */,
 	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_ListToBindableVectorViewAdapter_t965AC456C345910A7A10D27FF3D1869D28582899, NULL, &ListToBindableVectorViewAdapter_t965AC456C345910A7A10D27FF3D1869D28582899_0_0_0 } /* System.Runtime.InteropServices.WindowsRuntime.Xaml.ListToBindableVectorViewAdapter */,

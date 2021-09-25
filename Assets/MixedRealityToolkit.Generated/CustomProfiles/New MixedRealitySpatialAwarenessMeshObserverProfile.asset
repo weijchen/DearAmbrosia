@@ -24,6 +24,6 @@ MonoBehaviour:
   recalculateNormals: 1
   displayOption: 2
   visibleMaterial: {fileID: 0}
-  occlusionMaterial: {fileID: 0}
+  occlusionMaterial: {fileID: 2100000, guid: 3688b2e16f84de942968bd4b70710262, type: 2}
   physicsMaterial: {fileID: 0}
   runtimeSpatialMeshPrefab: {fileID: 0}

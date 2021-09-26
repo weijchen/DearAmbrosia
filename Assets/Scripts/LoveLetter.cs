@@ -5,12 +5,13 @@ using UnityEngine;
 public class LoveLetter : MonoBehaviour
 {
     public GameObject OpenedLetter;
-    private bool isOpened;
+    //public GameObject OpenTip;
+    private bool isTouched;
     
     // Start is called before the first frame update
     void Start()
     {
-        isOpened = false;
+        isTouched = false;
         OpenedLetter.SetActive(false);
     }
 
@@ -24,16 +25,17 @@ public class LoveLetter : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            isOpened = true;
-            ChangeLetterStatus(isOpened);
+            isTouched = true;
+            ChangeTipStatus(isTouched);
         }
     }
 
-    private void ChangeLetterStatus(bool isOpened)
+    private void ChangeTipStatus(bool isTouched)
     {
-        if(isOpened)
+        if(isTouched)
         {
             OpenedLetter.SetActive(true);
+            gameObject.SetActive(false);
         }
         else
         {

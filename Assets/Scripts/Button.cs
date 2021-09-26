@@ -8,14 +8,14 @@ public class Button : MonoBehaviour
     public Material CollidedMaterial;
     public Material OriginalMaterial;
     public GameObject Item1Box;
-    public GameObject Item1;
+    public GameObject LoveLetter;
 
     private bool isCollide = false;
     
     // Start is called before the first frame update
     void Start()
     {
-        Item1.SetActive(false);
+        LoveLetter.SetActive(false);
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class Button : MonoBehaviour
             Debug.Log(isCollide);
             ChangeButtonStatus(isCollide);
             Item1Box.SetActive(false);
-            Item1.SetActive(true);
+            LoveLetter.SetActive(true);
         }
     }
     private void ChangeButtonStatus(bool isCollide)
@@ -40,6 +40,7 @@ public class Button : MonoBehaviour
         if (isCollide)
         {
             gameObject.GetComponent<MeshRenderer>().material = CollidedMaterial;
+            gameObject.transform.localScale = new Vector3(0.01f, 0.0005f, 0.01f);
         }
         else
         {

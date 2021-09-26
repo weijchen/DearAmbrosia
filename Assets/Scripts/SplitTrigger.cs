@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.MixedReality.Toolkit;
 using UnityEngine;
 
 public class SplitTrigger : MonoBehaviour
@@ -15,10 +16,12 @@ public class SplitTrigger : MonoBehaviour
     private List<Ball> newPlayers = new List<Ball>();
     
     private GameManager _gameManager;
+    private MergeMech _mergeMech;
 
     private void Start()
     {
         _gameManager = FindObjectOfType<GameManager>();
+        _mergeMech = FindObjectOfType<MergeMech>();
     }
 
     private void OnCollisionEnter(Collision other)
@@ -43,5 +46,6 @@ public class SplitTrigger : MonoBehaviour
         }
         hasCollide = true;
         _gameManager.SetBall(newPlayers);
+        _mergeMech.SetBallToDestroy(newPlayers);
     }
 }

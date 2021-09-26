@@ -5,6 +5,8 @@ using UnityEngine;
 public class LoveLetter : MonoBehaviour
 {
     public GameObject OpenedLetter;
+
+    [SerializeField] private AudioClip _audioClip;
     //public GameObject OpenTip;
     private bool isTouched;
     

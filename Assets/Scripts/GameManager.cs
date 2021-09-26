@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
         float refScaleY = TiltBoard.transform.localScale.y * scaleMultiplier;
         float refScaleZ = TiltBoard.transform.localScale.z * scaleMultiplier;
 
+        Debug.Log(balls.Count);
         foreach (var ball in balls)
         {
             ball.transform.localScale = new Vector3(refScaleX, refScaleY, refScaleZ);

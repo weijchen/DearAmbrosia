@@ -9,19 +9,19 @@ using UnityEngine.XR.ARFoundation;
 public class FogBall : MonoBehaviour
 {
     [SerializeField] private Transform fogCenterPoint;
-    [SerializeField] private GameObject player;
     [SerializeField] private float destroyDist = 0.03f;
    
-    private Material fogMaterial;
     private bool isPlayerEnter = false;
     private float radius = 0f;
+    private GameObject potentialPlayer = null;
+    
+    private Material fogMaterial;
 
     void Start()
     {
         fogMaterial = GetComponent<MeshRenderer>().material;
     }
     
-
     void Update()
     {
         if (isPlayerEnter)
@@ -35,6 +35,7 @@ public class FogBall : MonoBehaviour
         if (other.transform.tag == "Player")
         {
             isPlayerEnter = true;
+            potentialPlayer = other.gameObject;
             radius = Vector3.Distance(other.transform.position, transform.position);
         }
     }
@@ -49,7 +50,7 @@ public class FogBall : MonoBehaviour
 
     private void AdjustAlpha()
     {
-        float dist = Vector3.Distance(player.transform.position , fogCenterPoint.transform.position);
+        float dist = Vector3.Distance(potentialPlayer.transform.position , fogCenterPoint.transform.position);
         
         if (dist > destroyDist)
         {

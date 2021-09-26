@@ -1,17 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject TiltBoard;
-    [SerializeField] private GameObject Ball;
+    [SerializeField] private List<Ball> balls;
     [SerializeField] private float scaleMultiplier = 0.1f;
-    
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
@@ -24,6 +21,14 @@ public class GameManager : MonoBehaviour
         float refScaleY = TiltBoard.transform.localScale.y * scaleMultiplier;
         float refScaleZ = TiltBoard.transform.localScale.z * scaleMultiplier;
 
-        Ball.transform.localScale = new Vector3(refScaleX, refScaleY, refScaleZ);
+        foreach (var ball in balls)
+        {
+            ball.transform.localScale = new Vector3(refScaleX, refScaleY, refScaleZ);
+        }
+    }
+
+    public void SetBall(List<Ball> newBalls)
+    {
+        balls = newBalls;
     }
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1146684211}
   - component: {fileID: 1146684210}
   - component: {fileID: 1146684209}
+  - component: {fileID: 1171401102}
   m_Layer: 0
   m_Name: FemaleMarble
   m_TagString: Untagged
@@ -157,6 +158,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1171401102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087297885560371647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcf90c6dcc4ebb944aa0fdb9710029f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoveLetterCube: {fileID: 0}
+  ChocolateCube: {fileID: 0}
+  RoseCube: {fileID: 0}
+  _audioSource: {fileID: 1146684209}
+  _HEClip: {fileID: 8300000, guid: d876a3d79d2a2f04cb270e83f1b15ce4, type: 3}
+  _BEClip: {fileID: 8300000, guid: c52d59ec0e118784ba2d0afebbcea989, type: 3}
 --- !u!1 &1508182135626855777
 GameObject:
   m_ObjectHideFlags: 0

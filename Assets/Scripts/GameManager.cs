@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<Ball> balls;
     [SerializeField] private float scaleMultiplier = 0.1f;
     [SerializeField] private GameObject wallToDestroy;
+    [SerializeField] private Material[] _materials;
     
     private int giftCollected = 0;
     private int targetGiftToCollect = 3;

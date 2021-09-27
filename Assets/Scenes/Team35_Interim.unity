@@ -778,11 +778,11 @@ GameObject:
   - component: {fileID: 311952171}
   m_Layer: 0
   m_Name: LoveLetterCube
-  m_TagString: Untagged
+  m_TagString: LoveLetter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &311952167
 Transform:
   m_ObjectHideFlags: 0
@@ -805,7 +805,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311952166}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -3974,11 +3974,11 @@ GameObject:
   - component: {fileID: 1571821068}
   m_Layer: 0
   m_Name: ChocolateCube
-  m_TagString: Untagged
+  m_TagString: Chocolate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1571821064
 Transform:
   m_ObjectHideFlags: 0
@@ -4001,7 +4001,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571821063}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -4420,6 +4420,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5227722047234341359, guid: 1f96fd8a9ddad3f4f9f98ec4588df865, type: 3}
   m_PrefabInstance: {fileID: 1705999667}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1734822928 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1087297885560371647, guid: 2625d9417df44ce4b9b1d125111b02c4, type: 3}
+  m_PrefabInstance: {fileID: 6560753959217091858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1734822932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734822928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcf90c6dcc4ebb944aa0fdb9710029f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1741551370 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6403945844386991680, guid: 357ae98db5d9cab4ea2889c104d291c1, type: 3}
@@ -5233,11 +5250,11 @@ GameObject:
   - component: {fileID: 1982022523}
   m_Layer: 0
   m_Name: RoseCube
-  m_TagString: Untagged
+  m_TagString: Rose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1982022519
 Transform:
   m_ObjectHideFlags: 0
@@ -5260,7 +5277,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982022518}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -5751,6 +5768,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 543450653388591836}
     m_Modifications:
+    - target: {fileID: 1146684211, guid: 2625d9417df44ce4b9b1d125111b02c4, type: 3}
+      propertyPath: m_Radius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146684211, guid: 2625d9417df44ce4b9b1d125111b02c4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 684477343139408230, guid: 2625d9417df44ce4b9b1d125111b02c4, type: 3}
       propertyPath: m_RootOrder
       value: 5

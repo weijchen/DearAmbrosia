@@ -11,6 +11,7 @@ public class MergeMech : MonoBehaviour
     [SerializeField] private MergeMechComponent mergeB;
     [SerializeField] private Transform respawnPoint;
     [SerializeField] private GameObject prize;
+    [SerializeField] private GameObject[] fogToDestroy;
 
     private List<Ball> newPlayer = new List<Ball>();
     private bool isATouch = false;
@@ -48,6 +49,14 @@ public class MergeMech : MonoBehaviour
                 {
                     ball.gameObject.SetActive(false);
                     Destroy(ball);
+                }
+
+                foreach (GameObject fog in fogToDestroy)
+                {
+                    if (fog != null)
+                    {
+                        Destroy(fog);
+                    }
                 }
             }
         }

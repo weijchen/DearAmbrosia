@@ -11,6 +11,7 @@ public class SplitTrigger : MonoBehaviour
     [SerializeField] private int splitToNumber;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private float splitMinus = 0.01f;
+    [SerializeField] private GameObject[] fogToDestroy;
 
     private bool hasCollide = false;
     private List<Ball> newPlayers = new List<Ball>();
@@ -48,5 +49,13 @@ public class SplitTrigger : MonoBehaviour
         hasCollide = true;
         _gameManager.SetBall(newPlayers);
         _mergeMech.SetBallToDestroy(newPlayers);
+
+        foreach (GameObject fog in fogToDestroy)
+        {
+            if (fog != null)
+            {
+                Destroy(fog);
+            }
+        }
     }
 }

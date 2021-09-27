@@ -18,6 +18,7 @@ public class EndingTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("trigger");
         if (other.gameObject.tag == "LoveLetter")
         {
             Debug.Log(100);

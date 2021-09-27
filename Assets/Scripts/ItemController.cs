@@ -5,8 +5,9 @@ using UnityEngine;
 public class ItemController : MonoBehaviour
 {
     [SerializeField] private GameObject ItemCollection;
-    // [SerializeField] private AudioSource _audioClip;
-    
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _CollideClip;
+
     //public GameObject OpenTip;
     private bool isTouched;
 
@@ -24,7 +25,7 @@ public class ItemController : MonoBehaviour
             {
                 isTouched = true;
                 Destroy(gameObject);
-                // _audioClip.Play();
+                _audioSource.PlayOneShot(_CollideClip);
                 ItemCollection.SetActive(true);    
             }
         }

@@ -4,26 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameManagerSimp : MonoBehaviour
 {
     [SerializeField] private GameObject TiltBoard;
     [SerializeField] private List<Ball> balls;
     [SerializeField] private float scaleMultiplier = 0.1f;
-    [SerializeField] private GameObject wallToDestroy;
-    [SerializeField] private Material[] _materials;
-    [SerializeField] private GameObject boardBase;
     
-    private int giftCollected = 0;
-    private int targetGiftToCollect = 3;
-
     void Update()
     {
         AdjustBallScale();
-        ChangeBoardColor();
-        if (giftCollected == targetGiftToCollect)
-        {
-            CollectAllGift();
-        }
     }
 
     private void AdjustBallScale()
@@ -37,25 +26,5 @@ public class GameManager : MonoBehaviour
         {
             ball.transform.localScale = new Vector3(refScaleX, refScaleY, refScaleZ);
         }
-    }
-
-    public void SetBall(List<Ball> newBalls)
-    {
-        balls = newBalls;
-    }
-
-    private void CollectAllGift()
-    {
-        Destroy(wallToDestroy);
-    }
-
-    public void AddGiftCollected()
-    {
-        giftCollected += 1;
-    }
-
-    public void ChangeBoardColor()
-    {
-        boardBase.GetComponent<MeshRenderer>().material = _materials[giftCollected];
     }
 }

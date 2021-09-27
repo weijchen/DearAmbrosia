@@ -14,6 +14,7 @@ public class MultiItemController : MonoBehaviour
     private SafeZone _safeZone;
     private int itemCollected = 0;
     private int targetItemAmount = 3;
+    private bool hasItemCollect = false;
     
 
     void Start()
@@ -25,7 +26,7 @@ public class MultiItemController : MonoBehaviour
 
     private void Update()
     {
-        if (itemCollected == targetItemAmount)
+        if (itemCollected == targetItemAmount && !hasItemCollect)
         {
             CollectAllItems();
         }
@@ -36,6 +37,7 @@ public class MultiItemController : MonoBehaviour
         _gameManager.AddGiftCollected();
         _safeZone.SetRespawnPosition(respawnPosition);
         ItemCollection.SetActive(true);
+        hasItemCollect = true;
     }
 
     public void CollectItem()

@@ -30,11 +30,6 @@ public class MergeMechComponent : MonoBehaviour
             }
         }    }
 
-    // private void OnCollisionEnter(Collision other)
-    // {
-    //     
-    // }
-
     private void OnTriggerExit(Collider other)
     {
         if (other.transform.tag == "Player")
@@ -54,11 +49,6 @@ public class MergeMechComponent : MonoBehaviour
             }
         }
     }
-
-    // private void OnCollisionExit(Collision other)
-    // {
-    //     
-    // }
 
     public GameObject GetTouchObject()
     {

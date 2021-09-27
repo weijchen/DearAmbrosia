@@ -21,11 +21,6 @@ public class LoveLetter : MonoBehaviour
         OpenedLetter.SetActive(false);
     }
 
-    void Update()
-    {
-        
-    }
-
     void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Player")

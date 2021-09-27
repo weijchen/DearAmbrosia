@@ -12,18 +12,6 @@ public class EndingTrigger : MonoBehaviour
     [SerializeField] private AudioClip _HEClip;
     [SerializeField] private AudioClip _BEClip;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("trigger");

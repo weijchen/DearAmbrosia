@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemCollection: {fileID: 0}
+  respawnPosition: {fileID: 0}
 --- !u!65 &2386312175891318211
 BoxCollider:
   m_ObjectHideFlags: 0

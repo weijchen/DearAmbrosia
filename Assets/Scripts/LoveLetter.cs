@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class LoveLetter : MonoBehaviour
 {
+    [SerializeField] private Transform spawnPosition;
     public GameObject OpenedLetter;
 
     //[SerializeField] private AudioSource _audioClip;
     //public GameObject OpenTip;
     
     private GameManager _gameManager;
+    private SafeZone _safeZone;
     private bool isTouched = false;
     
     void Start()
     {
         _gameManager = FindObjectOfType<GameManager>();
+        _safeZone = FindObjectOfType<SafeZone>();
         OpenedLetter.SetActive(false);
     }
 
@@ -30,6 +33,7 @@ public class LoveLetter : MonoBehaviour
             isTouched = true;
             OpenedLetter.SetActive(true);
             _gameManager.AddGiftCollected();
+            _safeZone.SetRespawnPosition(spawnPosition);
             Destroy(gameObject);
         }
     }

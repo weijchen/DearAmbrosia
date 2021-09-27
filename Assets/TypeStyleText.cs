@@ -2,40 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TypeStyleText : MonoBehaviour
 {
-    public float delay = 0.1f;
-    public string fullText;
-    private string currentText = "";
+    [SerializeField] float delay = 0.1f;
+    [SerializeField] string[] fullTexts;
+    [SerializeField] private GameObject[] textDisplay;
 
-    bool isPlaying = false;
+    private string currentText = "";
+    private bool isPlaying = false;
 
     private void Start()
     {
+        InitiateTextDisplay();
         StartCoroutine(ShowText());
+    }
+
+    private void InitiateTextDisplay()
+    {
+        foreach (var text in textDisplay)
+        {
+            text.GetComponent<TMP_Text>().text = "";
+        }
     }
 
     IEnumerator ShowText()
     {
         isPlaying = true;
-        for (int i = 0; i <= fullText.Length; i++)
+        for (int i = 0; i < fullTexts.Length; i++)
         {
-            currentText = fullText.Substring(0, i);
-            gameObject.GetComponent<Text>().text = currentText;
-            yield return new WaitForSeconds(delay);
+            for (int j = 0; j <= fullTexts[i].Length; j++)
+            {
+                currentText = fullTexts[i].Substring(0, j);
+                textDisplay[i].GetComponent<TMP_Text>().text = currentText;
+                yield return new WaitForSeconds(delay);
+            }
         }
+            
         isPlaying = false;
-    }
-
-    public void SetFullText(string newText)
-    {
-        fullText = newText;
-        StartCoroutine(ShowText());
-    }
-
-    public bool GetIsPlaying()
-    {
-        return isPlaying;
     }
 }

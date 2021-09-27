@@ -9,12 +9,17 @@ public class TypeStyleText : MonoBehaviour
     [SerializeField] float delay = 0.1f;
     [SerializeField] string[] fullTexts;
     [SerializeField] private GameObject[] textDisplay;
+    [SerializeField] private GameObject ItemCollection;
+    [SerializeField] private float destroyAfterSeconds = 2.0f;
 
     private string currentText = "";
     private bool isPlaying = false;
+    private GameManager _gameManager;
 
     private void Start()
     {
+        _gameManager = FindObjectOfType<GameManager>();
+        ItemCollection.SetActive(false);
         InitiateTextDisplay();
         StartCoroutine(ShowText());
     }
@@ -39,7 +44,9 @@ public class TypeStyleText : MonoBehaviour
                 yield return new WaitForSeconds(delay);
             }
         }
-            
+        ItemCollection.SetActive(true);
         isPlaying = false;
+        _gameManager.AddGiftCollected();
+        Destroy(gameObject.transform.parent.gameObject, destroyAfterSeconds);
     }
 }

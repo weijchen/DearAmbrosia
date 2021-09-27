@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 450567401}
   - component: {fileID: 450567405}
-  - component: {fileID: 450567404}
   - component: {fileID: 450567403}
   m_Layer: 0
   m_Name: Title (1)
@@ -79,14 +78,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!222 &450567404
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450567400}
-  m_CullTransparentMesh: 0
 --- !u!114 &450567403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,7 +186,6 @@ GameObject:
   m_Component:
   - component: {fileID: 453439993}
   - component: {fileID: 453439997}
-  - component: {fileID: 453439996}
   - component: {fileID: 453439995}
   m_Layer: 0
   m_Name: Title (2)
@@ -264,14 +254,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!222 &453439996
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453439992}
-  m_CullTransparentMesh: 0
 --- !u!114 &453439995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,7 +452,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1705996354}
   - component: {fileID: 1705996358}
-  - component: {fileID: 1705996357}
   - component: {fileID: 1705996356}
   m_Layer: 0
   m_Name: Title (3)
@@ -539,14 +520,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!222 &1705996357
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1705996353}
-  m_CullTransparentMesh: 0
 --- !u!114 &1705996356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,7 +542,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Your Prince Charming
 
-    
+
 
 '
   m_isRightToLeft: 0
@@ -969,7 +942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e23341061c7396e42b9ea8e1ed333ea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.05
+  delay: 0.03
   fullTexts:
   - 'My Dearest Ambrosia, '
   - 'The brightest flame is no rival to the warmth your words bring to my heart.
@@ -984,6 +957,7 @@ MonoBehaviour:
   - {fileID: 450567400}
   - {fileID: 453439992}
   - {fileID: 1705996353}
+  ItemCollection: {fileID: 0}
 --- !u!1 &4662803571784768297
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,7 +968,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4662803571784768296}
   - component: {fileID: 4662803571784768300}
-  - component: {fileID: 4662803571784768298}
   - component: {fileID: 4662803571784768299}
   m_Layer: 0
   m_Name: Title
@@ -1063,14 +1036,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!222 &4662803571784768298
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4662803571784768297}
-  m_CullTransparentMesh: 0
 --- !u!114 &4662803571784768299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1186,7 +1151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4662803572291365692
 Transform:
   m_ObjectHideFlags: 0

@@ -8,16 +8,16 @@ public class LoveLetter : MonoBehaviour
 
     //[SerializeField] private AudioSource _audioClip;
     //public GameObject OpenTip;
-    private bool isTouched;
     
-    // Start is called before the first frame update
+    private GameManager _gameManager;
+    private bool isTouched = false;
+    
     void Start()
     {
-        isTouched = false;
+        _gameManager = FindObjectOfType<GameManager>();
         OpenedLetter.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -29,6 +29,8 @@ public class LoveLetter : MonoBehaviour
         {
             isTouched = true;
             OpenedLetter.SetActive(true);
+            _gameManager.AddGiftCollected();
+            Destroy(gameObject);
         }
     }
 }

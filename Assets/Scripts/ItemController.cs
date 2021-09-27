@@ -4,34 +4,29 @@ using UnityEngine;
 
 public class ItemController : MonoBehaviour
 {
-    public GameObject ItemCollection;
-
+    [SerializeField] private GameObject ItemCollection;
     // [SerializeField] private AudioSource _audioClip;
+    
     //public GameObject OpenTip;
     private bool isTouched;
 
-    // Start is called before the first frame update
     void Start()
     {
         isTouched = false;
         ItemCollection.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            isTouched = true;
-            Destroy(gameObject);
-            // _audioClip.Play();
-            Debug.Log(100);
-            ItemCollection.SetActive(true);
+            if (!isTouched)
+            {
+                isTouched = true;
+                Destroy(gameObject);
+                // _audioClip.Play();
+                ItemCollection.SetActive(true);    
+            }
         }
     }
 }

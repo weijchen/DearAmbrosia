@@ -31,6 +31,7 @@ public class SplitTrigger : MonoBehaviour
             if (!hasCollide)
             {
                 SplitPlayer();
+                GetComponent<BoxCollider>().enabled = false;
                 Destroy(other.gameObject);
             }
         }

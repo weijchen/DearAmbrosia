@@ -2,33 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LoveLetter : MonoBehaviour
+public class ItemController : MonoBehaviour
 {
-    public GameObject OpenedLetter;
+    public GameObject ItemCollection;
 
-    //[SerializeField] private AudioSource _audioClip;
+    // [SerializeField] private AudioSource _audioClip;
     //public GameObject OpenTip;
     private bool isTouched;
-    
+
     // Start is called before the first frame update
     void Start()
     {
         isTouched = false;
-        OpenedLetter.SetActive(false);
+        ItemCollection.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             isTouched = true;
-            OpenedLetter.SetActive(true);
+            Destroy(gameObject);
+            // _audioClip.Play();
+            Debug.Log(100);
+            ItemCollection.SetActive(true);
         }
     }
 }

@@ -30,25 +30,25 @@ public class MergeMechComponent : MonoBehaviour
             }
         }    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.transform.tag == "Player")
-        {
-            if (aOrB.ToLower() == "a")
-            {
-                _mergeMech.SetATouch(false);            
-                touchObject = null;
-                _mergeMech.SetAMat(InitialdMaterial);
-            }
-            if (aOrB.ToLower() == "b")
-            {
-                _mergeMech.SetBTouch(false);
-                touchObject = null;
-                _mergeMech.SetBMat(InitialdMaterial);
-
-            }
-        }
-    }
+    // private void OnTriggerExit(Collider other)
+    // {
+    //     if (other.transform.tag == "Player")
+    //     {
+    //         if (aOrB.ToLower() == "a")
+    //         {
+    //             _mergeMech.SetATouch(false);            
+    //             touchObject = null;
+    //             _mergeMech.SetAMat(InitialdMaterial);
+    //         }
+    //         if (aOrB.ToLower() == "b")
+    //         {
+    //             _mergeMech.SetBTouch(false);
+    //             touchObject = null;
+    //             _mergeMech.SetBMat(InitialdMaterial);
+    //
+    //         }
+    //     }
+    // }
 
     public GameObject GetTouchObject()
     {

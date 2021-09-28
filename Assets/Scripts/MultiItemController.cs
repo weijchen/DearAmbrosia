@@ -5,23 +5,19 @@ using UnityEngine;
 
 public class MultiItemController : MonoBehaviour
 {
-    [SerializeField] private GameObject ItemCollection;
     [SerializeField] private Transform respawnPosition;
-    // [SerializeField] private AudioSource _audioClip;
-    
-    //public GameObject OpenTip;
-    private GameManager _gameManager;
-    private SafeZone _safeZone;
+
     private int itemCollected = 0;
     private int targetItemAmount = 3;
     private bool hasItemCollect = false;
-    
 
+    private GameManager _gameManager;
+    private SafeZone _safeZone;
+    
     void Start()
     {
         _gameManager = FindObjectOfType<GameManager>();
         _safeZone = FindObjectOfType<SafeZone>();
-        ItemCollection.SetActive(false);
     }
 
     private void Update()
@@ -36,7 +32,6 @@ public class MultiItemController : MonoBehaviour
     {
         _gameManager.AddGiftCollected();
         _safeZone.SetRespawnPosition(respawnPosition);
-        ItemCollection.SetActive(true);
         hasItemCollect = true;
     }
 

@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class ItemController : MonoBehaviour
 {
-    [SerializeField] private GameObject ItemCollection;
-
     [SerializeField] private Transform respawnPosition;
-    // [SerializeField] private AudioSource _audioClip;
+    [SerializeField] private AudioClip _audioClip;
     
-    //public GameObject OpenTip;
     private bool isTouched;
     private SafeZone _safeZone;
+    private GameManager _gameManager;
+    private SoundEffectManager _soundEffectManager;
 
     void Start()
     {
         _safeZone = FindObjectOfType<SafeZone>();
+        _gameManager = FindObjectOfType<GameManager>();
+        _soundEffectManager = FindObjectOfType<SoundEffectManager>();
         isTouched = false;
-        ItemCollection.SetActive(false);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -27,10 +27,10 @@ public class ItemController : MonoBehaviour
             if (!isTouched)
             {
                 isTouched = true;
-                Destroy(gameObject);
-                // _audioClip.Play();
                 _safeZone.SetRespawnPosition(respawnPosition);
-                ItemCollection.SetActive(true);    
+                _gameManager.AddGiftCollected();
+                _soundEffectManager.PlayAudioClip(_audioClip);
+                Destroy(gameObject);
             }
         }
     }

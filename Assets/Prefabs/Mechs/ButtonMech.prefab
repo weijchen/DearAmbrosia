@@ -411,6 +411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPosition: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: 735ffbaa91719c945bbb7527d19b178e, type: 3}
   OpenedLetter: {fileID: 0}
 --- !u!1 &6421839880092827090
 GameObject:

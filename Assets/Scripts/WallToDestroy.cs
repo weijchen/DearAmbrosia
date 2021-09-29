@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class WallToDestroy : MonoBehaviour
 {
+    [SerializeField] private GameObject heartArrow;
+    [SerializeField] private AudioClip _audioClip;
+
     private GameManager _gameManager;
-    
+    private SoundEffectManager _soundEffectManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _soundEffectManager = FindObjectOfType<SoundEffectManager>();
     }
 
     // Update is called once per frame
@@ -22,7 +26,9 @@ public class WallToDestroy : MonoBehaviour
     {
         if (_gameManager.keyGot == true)
         {
+            _soundEffectManager.PlayAudioClip(_audioClip);
             gameObject.SetActive(false);
+            heartArrow.SetActive(true);
         }
     }
 }

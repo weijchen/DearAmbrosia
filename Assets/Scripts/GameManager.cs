@@ -9,13 +9,21 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject TiltBoard;
     [SerializeField] private List<Ball> balls;
     [SerializeField] private float scaleMultiplier = 0.1f;
-    [SerializeField] private GameObject wallToDestroy;
+    [SerializeField] private GameObject key;
     [SerializeField] private Material[] _materials;
     [SerializeField] private GameObject boardBase;
     
     private int giftCollected = 0;
     private int targetGiftToCollect = 3;
 
+    public bool keyGot;
+    public bool keyVisible;
+
+    private void Start()
+    {
+        keyGot = false;
+        keyVisible = false;
+    }
     void Update()
     {
         AdjustBallScale();
@@ -46,7 +54,8 @@ public class GameManager : MonoBehaviour
 
     private void CollectAllGift()
     {
-        Destroy(wallToDestroy);
+        key.SetActive(true);
+        targetGiftToCollect = 0;
     }
 
     public void AddGiftCollected()

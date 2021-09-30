@@ -1118,7 +1118,11 @@ PrefabInstance:
     - target: {fileID: 424128108, guid: 37a441ff3e5230447a1c3438ed79d82a, type: 3}
       propertyPath: _audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 735ffbaa91719c945bbb7527d19b178e, type: 3}
+      objectReference: {fileID: 8300000, guid: 52a5628ba047ca841a2735af1dd8f42a, type: 3}
+    - target: {fileID: 424128108, guid: 37a441ff3e5230447a1c3438ed79d82a, type: 3}
+      propertyPath: princePickClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 62bd813e6ece11e4fabc18425544739b, type: 3}
     - target: {fileID: 424128108, guid: 37a441ff3e5230447a1c3438ed79d82a, type: 3}
       propertyPath: _multiItemController
       value: 
@@ -1223,7 +1227,11 @@ PrefabInstance:
     - target: {fileID: 424128108, guid: 37a441ff3e5230447a1c3438ed79d82a, type: 3}
       propertyPath: _audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 735ffbaa91719c945bbb7527d19b178e, type: 3}
+      objectReference: {fileID: 8300000, guid: 52a5628ba047ca841a2735af1dd8f42a, type: 3}
+    - target: {fileID: 424128108, guid: 37a441ff3e5230447a1c3438ed79d82a, type: 3}
+      propertyPath: princePickClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 62bd813e6ece11e4fabc18425544739b, type: 3}
     - target: {fileID: 424128108, guid: 37a441ff3e5230447a1c3438ed79d82a, type: 3}
       propertyPath: _multiItemController
       value: 
@@ -6462,7 +6470,11 @@ PrefabInstance:
     - target: {fileID: 424128108, guid: 37a441ff3e5230447a1c3438ed79d82a, type: 3}
       propertyPath: _audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 735ffbaa91719c945bbb7527d19b178e, type: 3}
+      objectReference: {fileID: 8300000, guid: 52a5628ba047ca841a2735af1dd8f42a, type: 3}
+    - target: {fileID: 424128108, guid: 37a441ff3e5230447a1c3438ed79d82a, type: 3}
+      propertyPath: princePickClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 62bd813e6ece11e4fabc18425544739b, type: 3}
     - target: {fileID: 424128108, guid: 37a441ff3e5230447a1c3438ed79d82a, type: 3}
       propertyPath: _multiItemController
       value: 
@@ -6581,7 +6593,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPosition: {fileID: 651864552}
-  _audioClip: {fileID: 8300000, guid: 735ffbaa91719c945bbb7527d19b178e, type: 3}
+  _audioClip: {fileID: 8300000, guid: 52a5628ba047ca841a2735af1dd8f42a, type: 3}
+  princePickClip: {fileID: 8300000, guid: e75508c0cecaace4cb1f478c6ac14d2c, type: 3}
 --- !u!1 &1071342743
 GameObject:
   m_ObjectHideFlags: 0
@@ -6703,14 +6716,6 @@ PrefabInstance:
       propertyPath: boardBase
       value: 
       objectReference: {fileID: 1146083116}
-    - target: {fileID: 580078018, guid: bb4957c1cb6b7c6429ce30c876b15906, type: 3}
-      propertyPath: heartArrow
-      value: 
-      objectReference: {fileID: 1936113567}
-    - target: {fileID: 580078018, guid: bb4957c1cb6b7c6429ce30c876b15906, type: 3}
-      propertyPath: wallToDestroy
-      value: 
-      objectReference: {fileID: 1421303818}
     - target: {fileID: 580078018, guid: bb4957c1cb6b7c6429ce30c876b15906, type: 3}
       propertyPath: balls.Array.data[0]
       value: 
@@ -8295,7 +8300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heartArrow: {fileID: 1936113567}
-  _audioClip: {fileID: 8300000, guid: c73b33ebbe692c9499e4261cca494fcc, type: 3}
+  _audioClip: {fileID: 8300000, guid: 20c453fc6c5f1d64ab55654cd81947e3, type: 3}
 --- !u!1001 &1423160640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10469,7 +10474,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPosition: {fileID: 1915097435}
-  _audioClip: {fileID: 8300000, guid: 735ffbaa91719c945bbb7527d19b178e, type: 3}
+  _audioClip: {fileID: 8300000, guid: 52a5628ba047ca841a2735af1dd8f42a, type: 3}
+  _princePickClip: {fileID: 8300000, guid: c4d77783a43715944af2d351b4c954a0, type: 3}
   OpenedLetter: {fileID: 3255778601682144649}
 --- !u!65 &1762073001
 BoxCollider:
@@ -11096,7 +11102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPosition: {fileID: 788898463}
-  _audioClip: {fileID: 8300000, guid: 735ffbaa91719c945bbb7527d19b178e, type: 3}
+  _audioClip: {fileID: 8300000, guid: 52a5628ba047ca841a2735af1dd8f42a, type: 3}
   wallToDestroy: {fileID: 1421303818}
   OpenMaterial: {fileID: 2100000, guid: 13f63d4ed51df3a43974f161554ca459, type: 2}
 --- !u!1 &1915097434
@@ -12745,6 +12751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPosition: {fileID: 1915097435}
   _audioClip: {fileID: 8300000, guid: 735ffbaa91719c945bbb7527d19b178e, type: 3}
+  _princePickClip: {fileID: 0}
   OpenedLetter: {fileID: 3255778601682144649}
 --- !u!65 &534444376462617753
 BoxCollider:
@@ -13876,6 +13883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respawnPosition: {fileID: 651864552}
   _audioClip: {fileID: 8300000, guid: 735ffbaa91719c945bbb7527d19b178e, type: 3}
+  princePickClip: {fileID: 0}
 --- !u!65 &4851871937176959727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14183,9 +14191,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 6560753960217892387}
-  _meetAudioClip: {fileID: 8300000, guid: 9aed67c2eed06e8449b5d10f147aacfd, type: 3}
+  _meetAudioClip: {fileID: 8300000, guid: e85cc3dfd18bb384fb7d7396127e9e9b, type: 3}
   spawnPosition: {fileID: 1245856864}
   prizes: {fileID: 6560753959388008195}
+  clipPlayMaxCount: 5
 --- !u!135 &6560753960217892385
 SphereCollider:
   m_ObjectHideFlags: 0

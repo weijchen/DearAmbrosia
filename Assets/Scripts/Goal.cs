@@ -9,7 +9,9 @@ public class Goal : MonoBehaviour
     [SerializeField] private AudioClip _meetAudioClip;
     [SerializeField] private Transform spawnPosition;
     [SerializeField] private GameObject prizes;
+    [SerializeField] private int clipPlayMaxCount = 5;
 
+    private int clipPlayCount = 0;
     private SafeZone _safeZone;
 
     private void Start()
@@ -22,18 +24,13 @@ public class Goal : MonoBehaviour
     {
         if (other.transform.tag == "Player")
         {
-            _audioSource.PlayOneShot(_meetAudioClip);
+            if (clipPlayCount < clipPlayMaxCount)
+            {
+                _audioSource.PlayOneShot(_meetAudioClip);
+            }
             _safeZone.SetRespawnPosition(spawnPosition);
             prizes.SetActive(true);
-        }    }
-
-    // private void OnCollisionEnter(Collision other)
-    // {
-    //     if (other.transform.tag == "Player")
-    //     {
-    //         _audioSource.PlayOneShot(_meetAudioClip);
-    //         _safeZone.SetRespawnPosition(spawnPosition);
-    //         prizes.SetActive(true);
-    //     }
-    // }
+            clipPlayCount += 1;
+        }
+    }
 }

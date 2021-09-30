@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     {
         keyGot = false;
         keyVisible = false;
+        key.SetActive(false);
     }
     void Update()
     {

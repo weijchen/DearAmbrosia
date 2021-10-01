@@ -5,22 +5,26 @@ using UnityEngine;
 
 public class ConnectFlower : MonoBehaviour
 {
-    [SerializeField] private GameObject connectedObject;
+    [SerializeField] private FlowerWall rightFlowerWall;
 
+    private bool giftsAreColleted = false;
     private bool princeHasCross = false;
     
     void Start()
     {
         gameObject.GetComponent<MeshRenderer>().enabled = false;
-        connectedObject.GetComponent<MeshRenderer>().enabled = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Player")
+        if (other.transform.tag == "Player" && giftsAreColleted)
         {
-            gameObject.GetComponent<MeshRenderer>().enabled = true;
-            connectedObject.GetComponent<MeshRenderer>().enabled = true;
+            rightFlowerWall.ScaleUpFlower();
         }
+    }
+
+    public void SetGiftsAreCollected(bool state)
+    {
+        giftsAreColleted = true;
     }
 }

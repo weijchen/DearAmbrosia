@@ -21,10 +21,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float audioFadeOutTime = 0.2f;
     [SerializeField] private GameObject mainItem;
     [SerializeField] private Ball prince;
+    [SerializeField] private ConnectFlower[] rightMazeWall;
 
     [Header("Love Letter Text")] 
     [SerializeField] private TypeStyleTextForDialog _loveLetterTextPrince;
     [SerializeField] private TypeStyleTextForDialog _loveLetterTextPrincess;
+    [SerializeField] private FlowerWall leftFlowerWall;
     
     private int giftCollected = 0;
     private int targetGiftToCollect = 3;
@@ -79,6 +81,15 @@ public class GameManager : MonoBehaviour
     public void AddGiftCollected()
     {
         giftCollected += 1;
+        if (giftCollected == targetGiftToCollect)
+        {
+            leftFlowerWall.ScaleUpFlower();
+            foreach (ConnectFlower wall in rightMazeWall)
+            {
+                wall.SetGiftsAreCollected(true);
+            }
+
+        }
     }
 
     public void ChangeBoardColor()

@@ -6,8 +6,11 @@ public class KeyCollection : MonoBehaviour
 {
     [SerializeField] private Transform respawnPosition;
     [SerializeField] private AudioClip _audioClip;
+    
+    [Header("Door Mechanic")]
     [SerializeField] private GameObject wallToDestroy;
     [SerializeField] private Material OpenMaterial;
+    [SerializeField] private AudioClip doorSpawnClip;
     
     
     private SafeZone _safeZone;
@@ -39,6 +42,7 @@ public class KeyCollection : MonoBehaviour
 
     void AfterGotKey()
     {
+        _soundEffectManager.PlayAudioClip(doorSpawnClip);
         wallToDestroy.GetComponent<MeshRenderer>().material = OpenMaterial;
     }
 }

@@ -6,6 +6,7 @@ public class LoveLetter : MonoBehaviour
 {
     [SerializeField] private Transform spawnPosition;
     [SerializeField] private AudioClip _audioClip;
+    [SerializeField] private AudioClip _princePickClip;
     [SerializeField] private GameObject OpenedLetter;
 
     private bool isTouched = false;
@@ -31,6 +32,7 @@ public class LoveLetter : MonoBehaviour
             _gameManager.AddGiftCollected();
             _safeZone.SetRespawnPosition(spawnPosition);
             _soundEffectManager.PlayAudioClip(_audioClip);
+            _soundEffectManager.PlayAudioClip(_princePickClip);
             Destroy(gameObject);
         }
     }

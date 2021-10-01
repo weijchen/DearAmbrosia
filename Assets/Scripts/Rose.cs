@@ -7,8 +7,10 @@ public class Rose : MonoBehaviour
 {
     [SerializeField] private MultiItemController _multiItemController;
     [SerializeField] private AudioClip _audioClip;
+    [SerializeField] private AudioClip princePickClip;
 
     private SoundEffectManager _soundEffectManager;
+    private static bool hasPrincePickClipPlay = false;
 
     private void Start()
     {
@@ -21,6 +23,11 @@ public class Rose : MonoBehaviour
         {
             _multiItemController.CollectItem();
             _soundEffectManager.PlayAudioClip(_audioClip);
+            if (!hasPrincePickClipPlay)
+            {
+                _soundEffectManager.PlayAudioClip(princePickClip);
+                hasPrincePickClipPlay = true;
+            }
             Destroy(gameObject);
         }
     }

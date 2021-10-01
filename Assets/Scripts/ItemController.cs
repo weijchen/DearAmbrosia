@@ -6,6 +6,7 @@ public class ItemController : MonoBehaviour
 {
     [SerializeField] private Transform respawnPosition;
     [SerializeField] private AudioClip _audioClip;
+    [SerializeField] private AudioClip princePickClip;
     
     private bool isTouched;
     private SafeZone _safeZone;
@@ -30,6 +31,7 @@ public class ItemController : MonoBehaviour
                 _safeZone.SetRespawnPosition(respawnPosition);
                 _gameManager.AddGiftCollected();
                 _soundEffectManager.PlayAudioClip(_audioClip);
+                _soundEffectManager.PlayAudioClip(princePickClip);
                 Destroy(gameObject);
             }
         }

@@ -764,9 +764,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf90c6dcc4ebb944aa0fdb9710029f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoveLetterCube: {fileID: 311952166}
-  ChocolateCube: {fileID: 1571821063}
-  RoseCube: {fileID: 1982022518}
   _audioSource: {fileID: 1146684209}
   _HEClip: {fileID: 8300000, guid: d876a3d79d2a2f04cb270e83f1b15ce4, type: 3}
   _BEClip: {fileID: 8300000, guid: c52d59ec0e118784ba2d0afebbcea989, type: 3}
@@ -829,7 +826,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 11fd59ec97524a54286ce6aa23dc83af, type: 2}
+  - {fileID: 2100000, guid: 23f01e4f01a5a394bba3c6aa7243bf33, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -910,7 +907,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 13f63d4ed51df3a43974f161554ca459, type: 2}
+  - {fileID: 2100000, guid: 23f01e4f01a5a394bba3c6aa7243bf33, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -991,7 +988,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 11fd59ec97524a54286ce6aa23dc83af, type: 2}
+  - {fileID: 2100000, guid: 23f01e4f01a5a394bba3c6aa7243bf33, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

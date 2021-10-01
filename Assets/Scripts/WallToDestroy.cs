@@ -6,6 +6,7 @@ public class WallToDestroy : MonoBehaviour
 {
     [SerializeField] private GameObject heartArrow;
     [SerializeField] private AudioClip _audioClip;
+    [SerializeField] private AudioClip princessSoLongClip;
 
     private GameManager _gameManager;
     private SoundEffectManager _soundEffectManager;
@@ -27,6 +28,7 @@ public class WallToDestroy : MonoBehaviour
         if (_gameManager.keyGot == true)
         {
             _soundEffectManager.PlayAudioClip(_audioClip);
+            _soundEffectManager.PlayAudioClip(princessSoLongClip);
             gameObject.SetActive(false);
             heartArrow.SetActive(true);
         }

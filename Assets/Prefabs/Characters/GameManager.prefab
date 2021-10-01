@@ -47,10 +47,12 @@ MonoBehaviour:
   balls:
   - {fileID: 0}
   scaleMultiplier: 0.05
-  wallToDestroy: {fileID: 0}
+  key: {fileID: 0}
   _materials:
   - {fileID: 2100000, guid: 06b7d489815ed264bbf0e41da0ae188d, type: 2}
   - {fileID: 2100000, guid: a7a1552bd1df4ce4ebdbd3f47b84915b, type: 2}
   - {fileID: 2100000, guid: b868955d9e6ca944e9b9dfe2aeb8f263, type: 2}
   - {fileID: 2100000, guid: 5fa07bdf6528ae04ca51572f396a4d2f, type: 2}
   boardBase: {fileID: 0}
+  keyGot: 0
+  keyVisible: 0

@@ -34,6 +34,7 @@ public class LoveLetter : MonoBehaviour
             _soundEffectManager.PlayAudioClip(_audioClip);
             _soundEffectManager.PlayAudioClip(_princePickClip);
             Destroy(gameObject);
+            
         }
     }
 }

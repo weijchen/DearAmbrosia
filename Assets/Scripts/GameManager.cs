@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,18 +13,34 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject key;
     [SerializeField] private Material[] _materials;
     [SerializeField] private GameObject boardBase;
+    [SerializeField] private AudioClip loveLetterSceneClip;
+    [SerializeField] private AudioClip chocolateSceneClip;
+    [SerializeField] private AudioClip roseSceneClip;
+    [SerializeField] private AudioSource bgmManager;
+    [SerializeField] private float audioFadeInTime = 0.2f;
+    [SerializeField] private float audioFadeOutTime = 0.2f;
+    [SerializeField] private GameObject mainItem;
+    [SerializeField] private Ball prince;
+
+    [Header("Love Letter Text")] 
+    [SerializeField] private TypeStyleTextForDialog _loveLetterTextPrince;
+    [SerializeField] private TypeStyleTextForDialog _loveLetterTextPrincess;
     
     private int giftCollected = 0;
     private int targetGiftToCollect = 3;
+    private int endingSelection = 0;
 
     public bool keyGot;
     public bool keyVisible;
+    private AudioSource audioManager;
 
+        
     private void Start()
     {
         keyGot = false;
         keyVisible = false;
         key.SetActive(false);
+        audioManager = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -67,5 +84,65 @@ public class GameManager : MonoBehaviour
     public void ChangeBoardColor()
     {
         boardBase.GetComponent<MeshRenderer>().material = _materials[giftCollected];
+    }
+
+    public void ShowEndingAnim(int selection)
+    {
+        if (selection == 0)
+        {
+            StartCoroutine(AudioFadeScript.FadeOut(bgmManager, audioFadeOutTime));
+            audioManager.clip = loveLetterSceneClip;
+            mainItem.SetActive(false);
+            prince.gameObject.SetActive(false);
+            _loveLetterTextPrince.StartTextDialog();
+            _loveLetterTextPrincess.StartTextDialog();
+            StartCoroutine(AudioFadeScript.FadeIn(audioManager, audioFadeInTime));
+        } else if (selection == 1)
+        {
+            StartCoroutine(AudioFadeScript.FadeOut(bgmManager, audioFadeOutTime));
+            audioManager.clip = loveLetterSceneClip;
+            StartCoroutine(AudioFadeScript.FadeIn(audioManager, audioFadeInTime));
+        }
+        else
+        {
+            StartCoroutine(AudioFadeScript.FadeOut(bgmManager, audioFadeOutTime));
+            audioManager.clip = loveLetterSceneClip;
+            StartCoroutine(AudioFadeScript.FadeIn(audioManager, audioFadeInTime));
+        }
+    }
+}
+
+public static class AudioFadeScript
+{
+    public static IEnumerator FadeOut(AudioSource audioSource, float FadeTime)
+    {
+        float startVolume = audioSource.volume;
+ 
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+ 
+            yield return null;
+        }
+ 
+        audioSource.Stop();
+        audioSource.volume = startVolume;
+    }
+ 
+    public static IEnumerator FadeIn(AudioSource audioSource, float FadeTime)
+    {
+        float startVolume = 0.2f;
+ 
+        audioSource.volume = 0;
+        audioSource.Play();
+ 
+        while (audioSource.volume < 1.0f)
+        {
+            audioSource.volume += startVolume * Time.deltaTime / FadeTime;
+ 
+            yield return null;
+        }
+ 
+        audioSource.volume = 1f;
     }
 }

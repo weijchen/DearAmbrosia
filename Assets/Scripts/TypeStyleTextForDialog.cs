@@ -15,6 +15,8 @@ public class TypeStyleTextForDialog : MonoBehaviour
     [SerializeField] float wordDelay = 0.1f;
     [SerializeField] private float startDelay = 0.2f;
     [SerializeField] private float midDelay = 1.0f;
+    [SerializeField] private float endDelay = 2.0f;
+    [SerializeField] private bool hasEndingDialog = false;
     
     [Header("Dialog")]
     [SerializeField] private GameObject dialogObject;
@@ -41,6 +43,12 @@ public class TypeStyleTextForDialog : MonoBehaviour
         }
     }
 
+    public void StartTextDialog()
+    {
+        InitiateTextDisplay();
+        StartCoroutine(ShowText());
+    }
+
     private void InitiateTextDisplay()
     {
         textDisplay.GetComponent<TMP_Text>().text = "";
@@ -57,6 +65,11 @@ public class TypeStyleTextForDialog : MonoBehaviour
                 currentText = fullTexts[i].Substring(0, j);
                 textDisplay.GetComponent<TMP_Text>().text = currentText;
                 yield return new WaitForSeconds(wordDelay);
+            }
+
+            if (i == fullTexts.Length - 2 && hasEndingDialog)
+            {
+                yield return new WaitForSeconds(endDelay);
             }
 
             if (i == 0)

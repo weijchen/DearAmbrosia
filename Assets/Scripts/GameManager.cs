@@ -60,7 +60,6 @@ public class GameManager : MonoBehaviour
         float refScaleY = TiltBoard.transform.localScale.y * scaleMultiplier;
         float refScaleZ = TiltBoard.transform.localScale.z * scaleMultiplier;
 
-        Debug.Log("Number of ball: " + balls.Count);
         foreach (var ball in balls)
         {
             ball.transform.localScale = new Vector3(refScaleX, refScaleY, refScaleZ);
@@ -83,7 +82,9 @@ public class GameManager : MonoBehaviour
         giftCollected += 1;
         if (giftCollected == targetGiftToCollect)
         {
+            Debug.Log("collect all!");
             leftFlowerWall.ScaleUpFlower();
+            
             foreach (ConnectFlower wall in rightMazeWall)
             {
                 wall.SetGiftsAreCollected(true);

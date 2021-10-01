@@ -59,8 +59,25 @@ MonoBehaviour:
   chocolateSceneClip: {fileID: 8300000, guid: aa75cb9fec716e64383c3a25ea752af4, type: 3}
   roseSceneClip: {fileID: 8300000, guid: aa75cb9fec716e64383c3a25ea752af4, type: 3}
   bgmManager: {fileID: 0}
-  audioFadeInTime: 10
-  audioFadeOutTime: 10
+  audioFadeInTime: 5
+  audioFadeOutTime: 5
+  mainItem: {fileID: 0}
+  prince: {fileID: 0}
+  rightMazeWall:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _loveLetterTextPrince: {fileID: 0}
+  _loveLetterTextPrincess: {fileID: 0}
+  leftFlowerWall: {fileID: 0}
   keyGot: 0
   keyVisible: 0
 --- !u!82 &1765831962
@@ -74,7 +91,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

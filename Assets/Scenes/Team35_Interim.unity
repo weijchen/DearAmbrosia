@@ -6360,14 +6360,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1138360882}
     - target: {fileID: 580078018, guid: bb4957c1cb6b7c6429ce30c876b15906, type: 3}
-      propertyPath: audioFadeInTime
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 580078018, guid: bb4957c1cb6b7c6429ce30c876b15906, type: 3}
-      propertyPath: audioFadeOutTime
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 580078018, guid: bb4957c1cb6b7c6429ce30c876b15906, type: 3}
       propertyPath: balls.Array.data[0]
       value: 
       objectReference: {fileID: 3918738617743978560}
@@ -6379,10 +6371,6 @@ PrefabInstance:
       propertyPath: _loveLetterTextPrincess
       value: 
       objectReference: {fileID: 34243924}
-    - target: {fileID: 580078018, guid: bb4957c1cb6b7c6429ce30c876b15906, type: 3}
-      propertyPath: rightMazeWall.Array.size
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 580078018, guid: bb4957c1cb6b7c6429ce30c876b15906, type: 3}
       propertyPath: rightMazeWall.Array.data[0]
       value: 
@@ -6427,26 +6415,6 @@ PrefabInstance:
       propertyPath: rightMazeWall.Array.data[10]
       value: 
       objectReference: {fileID: 992770043}
-    - target: {fileID: 580078018, guid: bb4957c1cb6b7c6429ce30c876b15906, type: 3}
-      propertyPath: rightMazeWallException.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 580078018, guid: bb4957c1cb6b7c6429ce30c876b15906, type: 3}
-      propertyPath: rightMazeWallException.Array.data[0]
-      value: 
-      objectReference: {fileID: 1896260314}
-    - target: {fileID: 580078018, guid: bb4957c1cb6b7c6429ce30c876b15906, type: 3}
-      propertyPath: rightMazeWallException.Array.data[1]
-      value: 
-      objectReference: {fileID: 10241727}
-    - target: {fileID: 1765831962, guid: bb4957c1cb6b7c6429ce30c876b15906, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1765831962, guid: bb4957c1cb6b7c6429ce30c876b15906, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4291161394659318289, guid: bb4957c1cb6b7c6429ce30c876b15906, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -48890,14 +48858,6 @@ PrefabInstance:
     - target: {fileID: 4991757545496282147, guid: 4af768b17ebd57048ad24c772f0ac6fa, type: 3}
       propertyPath: m_Name
       value: Epilogue Animation with Love Letter
-      objectReference: {fileID: 0}
-    - target: {fileID: 5298239614586452323, guid: 4af768b17ebd57048ad24c772f0ac6fa, type: 3}
-      propertyPath: hasEndingDialog
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5298239615455954809, guid: 4af768b17ebd57048ad24c772f0ac6fa, type: 3}
-      propertyPath: hasEndingDialog
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5624320451432865433, guid: 4af768b17ebd57048ad24c772f0ac6fa, type: 3}
       propertyPath: m_RootOrder

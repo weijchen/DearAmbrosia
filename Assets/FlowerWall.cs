@@ -28,6 +28,7 @@ public class FlowerWall : MonoBehaviour
 
     public void ScaleUpFlower()
     {
+        Debug.Log("scale up");
         foreach (FlowerInstance flower in flowerObject)
         {
             flower.StartScaleCoroutine();

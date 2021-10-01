@@ -373,6 +373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5624320451432865433}
   - component: {fileID: 1796291329096090851}
+  - component: {fileID: 1889934046}
   m_Layer: 0
   m_Name: Epilogue Animation with Love Letter
   m_TagString: Untagged
@@ -424,6 +425,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1889934046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4991757545496282147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 271c5dea0e87ef14c8e6b2914b8e5bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleSystem: {fileID: 7749230677136551011}
 --- !u!1 &5094000022318570415
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,6 +759,8 @@ MonoBehaviour:
   wordDelay: 0.06
   startDelay: 5
   midDelay: 1
+  endDelay: 2
+  hasEndingDialog: 1
   dialogObject: {fileID: 5298239613772173935}
   dialogDeleteAfterSecond: 10
 --- !u!65 &5298239614586452320
@@ -1247,6 +1263,8 @@ MonoBehaviour:
   wordDelay: 0.05
   startDelay: 0
   midDelay: 6
+  endDelay: 2
+  hasEndingDialog: 1
   dialogObject: {fileID: 5298239615137358274}
   dialogDeleteAfterSecond: 10
 --- !u!65 &5298239615455954758
@@ -2572,5 +2590,10 @@ PrefabInstance:
 --- !u!4 &7749230676197867467 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 260972322694869335, guid: 796be368b43995a45939d1f8976aba17, type: 3}
+  m_PrefabInstance: {fileID: 7500152336312618652}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7749230677136551011 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 260972321487086335, guid: 796be368b43995a45939d1f8976aba17, type: 3}
   m_PrefabInstance: {fileID: 7500152336312618652}
   m_PrefabAsset: {fileID: 0}

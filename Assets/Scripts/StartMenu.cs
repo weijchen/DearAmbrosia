@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,43 +6,29 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    public Material CollidedMaterial;
-    public Material OriginalMaterial;
+    [SerializeField] private Material CollidedMaterial;
+    [SerializeField] private Material OriginalMaterial;
 
+    private bool itemHasCollect = false;
     private bool isCollide = false;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-
+        gameObject.GetComponent<MeshRenderer>().material = OriginalMaterial;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetItemHasCollect(bool state)
     {
-
+        itemHasCollect = true;
+        gameObject.GetComponent<MeshRenderer>().material = CollidedMaterial;
     }
-
-    void OnCollisionEnter(Collision collision)
+    
+    private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && itemHasCollect)
         {
+            SceneManager.LoadScene("MainScene");
             isCollide = true;
-            Debug.Log(isCollide);
-            ChangeButtonStatus(isCollide);
-        }
-    }
-    private void ChangeButtonStatus(bool isCollide)
-    {
-        if (isCollide)
-        {
-            gameObject.GetComponent<MeshRenderer>().material = CollidedMaterial;
-            gameObject.transform.localScale = new Vector3(0.3f, 0.025f, 0.3f);
-            SceneManager.LoadScene("Team35_Interim");
-        }
-        else
-        {
-            gameObject.GetComponent<MeshRenderer>().material = OriginalMaterial;
         }
     }
 }

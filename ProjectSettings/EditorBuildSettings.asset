@@ -5,9 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Team35_Interim.unity
-    guid: d77aba4be0def384d8da13908d51f837
+    path: Assets/Scenes/StartMenu.unity
+    guid: 979f5fdac59b6354589bef3033673557
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 35c05d68ba293d3458b14cfe6651aa59
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d8f05fe3a8f6a32489cf9983324919c7, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 5dd00f10bf290f042990b9e75306a4f4, type: 2}

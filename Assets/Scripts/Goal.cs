@@ -9,6 +9,8 @@ public class Goal : MonoBehaviour
     [SerializeField] private AudioClip _meetAudioClip;
     [SerializeField] private Transform spawnPosition;
     [SerializeField] private GameObject prizes;
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject environment;
     [SerializeField] private int clipPlayMaxCount = 5;
 
     private int clipPlayCount = 0;
@@ -30,6 +32,8 @@ public class Goal : MonoBehaviour
             }
             _safeZone.SetRespawnPosition(spawnPosition);
             prizes.SetActive(true);
+            environment.SetActive(false);
+            player.SetActive(false);
             clipPlayCount += 1;
         }
     }

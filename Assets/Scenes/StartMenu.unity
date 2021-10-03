@@ -320,7 +320,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0529, y: 0.0454}
+  m_AnchoredPosition: {x: 0.067, y: -0.132}
   m_SizeDelta: {x: 54.472, y: 26.353}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &185199134
@@ -577,7 +577,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302471153}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.727, y: -1.076, z: 1.246}
+  m_LocalPosition: {x: 0.729, y: -0.85499996, z: 1.246}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 348689600}
@@ -1015,6 +1015,7 @@ MonoBehaviour:
   - I can't believe you forget our anniversary!
   - It is not an excuse!
   - GET OUT!
+  - 
   textDisplay: {fileID: 169159919}
   wordDelay: 0.07
   startDelay: 0
@@ -1122,8 +1123,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439390909}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.253, z: 1.003}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.00500001, y: -0.253, z: 0.99710006}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 1313851422}
   m_Father: {fileID: 0}
@@ -1733,8 +1734,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803361440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.302, y: 0.10589999, z: 0.86389995}
-  m_LocalScale: {x: 0.59999996, y: 0.59999996, z: 0.59999996}
+  m_LocalPosition: {x: -0.165, y: 0.05, z: 0.858}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 363798226}
   - {fileID: 1989063203}
@@ -3271,7 +3272,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850449132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0309104, y: 0.003978327, z: 0.725}
+  m_LocalPosition: {x: 0.005, y: 0.003978327, z: 0.538}
   m_LocalScale: {x: 0.20753, y: 0.15625, z: 0.020715}
   m_Children:
   - {fileID: 2003051240}
@@ -3322,7 +3323,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881516186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.093303174, y: -0.18722628, z: 0.5481125}
+  m_LocalPosition: {x: -0.093303174, y: 0.03377372, z: 0.5481125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3586,8 +3587,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942682031}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3828, y: 0.10589999, z: 0.86389995}
-  m_LocalScale: {x: 0.59999996, y: 0.59999996, z: 0.59999996}
+  m_LocalPosition: {x: 0.178, y: -0.064, z: 0.858}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 2073593594}
   - {fileID: 389155137}
@@ -4319,6 +4320,7 @@ MonoBehaviour:
   - I have a little work to do. You know this.
   - Unbelievable...
   - Fine...I'll make it up to you...
+  - 
   textDisplay: {fileID: 1584849965}
   wordDelay: 0.07
   startDelay: 3.5
@@ -4458,7 +4460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3862247030415480397, guid: 9b40512a23c89d44ca1621fd4b121647, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.431
+      value: -0.21
       objectReference: {fileID: 0}
     - target: {fileID: 3862247030415480397, guid: 9b40512a23c89d44ca1621fd4b121647, type: 3}
       propertyPath: m_LocalPosition.z

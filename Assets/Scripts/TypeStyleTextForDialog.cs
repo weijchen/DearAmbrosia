@@ -71,7 +71,7 @@ public class TypeStyleTextForDialog : MonoBehaviour
                 yield return new WaitForSeconds(endDelay);
             }
 
-            if (i == 0)
+            else
             {
                 yield return new WaitForSeconds(midDelay);
             }

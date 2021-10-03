@@ -21,7 +21,8 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: Event EpilogueAnimationRosesObserver has a time (8.024358)
+      outside the clip's valid range (0.000000..7.875001). It will never be fired
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -62,6 +63,20 @@ ModelImporter:
       - time: 0.49407247
         functionName: EpilogueAnimationRosesObserver
         data: EpilogueAnimationFireEnd
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.8006736
+        functionName: EpilogueAnimationRosesObserver
+        data: EpilogueAnimationStartKiss
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 1
+        functionName: EpilogueAnimationRosesObserver
+        data: EpilogueAnimationEnded
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0

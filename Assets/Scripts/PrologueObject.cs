@@ -6,24 +6,26 @@ using UnityEngine.Serialization;
 
 public class PrologueObject : MonoBehaviour
 {
-    [SerializeField] private GameObject playBoard;
-    [SerializeField] private GameObject player;
-    [SerializeField] private AudioClip bgm;
+    [SerializeField] private GameObject _startAnim;
+    [SerializeField] private GameObject _playBoard;
+    [SerializeField] private GameObject _player;
+    [SerializeField] private AudioClip _bgm;
     [SerializeField] private AudioSource _audioSource;
 
     void Start()
     {
-        playBoard.SetActive(false);
-        player.SetActive(false);
+        _playBoard.SetActive(false);
+        _player.SetActive(false);
     }
 
     public void PrologueAnimationObserver(string message)
     {
         if (message.Equals("PrologueAnimationEnded"))
         {
-            playBoard.SetActive(true);
-            player.SetActive(true);
-            _audioSource.PlayOneShot(bgm);
+            _startAnim.SetActive(false);
+            _playBoard.SetActive(true);
+            _player.SetActive(true);
+            _audioSource.PlayOneShot(_bgm);
         }
     }
 }

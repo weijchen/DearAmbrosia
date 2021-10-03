@@ -8,18 +8,17 @@ public class ItemCollections : MonoBehaviour
     [SerializeField] [Range(0, 2)] private int endingAnimSelection;
     [SerializeField] private GameObject epilogueAnimObj;
     [SerializeField] private AudioClip _endingClip;
+    [SerializeField] private AudioSource _audioSource;
 
     private GameManager _gameManager;
-    private AudioSource _audioSource;
 
     private void Start()
     {
         _gameManager = FindObjectOfType<GameManager>();
-        _audioSource = GetComponent<AudioSource>();
         epilogueAnimObj.SetActive(false);
     }
     
-    public void DetectHandHover()
+    public void DetectHandClick()
     {
         epilogueAnimObj.SetActive(true);
         _gameManager.ShowEndingAnim(endingAnimSelection);

@@ -37,9 +37,6 @@ public class FlowerInstance : MonoBehaviour
 
         Vector3 fromScale = transform.localScale;
         Vector3 toScale = originScale;
-
-        Debug.Log(fromScale);
-        Debug.Log(toScale);
         
         while (i < 1)
         {

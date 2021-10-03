@@ -9,7 +9,6 @@ public class SafeZone : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("exit");
         if (other.transform.tag == "Player")
         {
             Debug.Log("respawn");

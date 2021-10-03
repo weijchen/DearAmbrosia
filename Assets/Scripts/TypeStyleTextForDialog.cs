@@ -29,7 +29,6 @@ public class TypeStyleTextForDialog : MonoBehaviour
     private void Start()
     {
         InitiateTextDisplay();
-        StartCoroutine(ShowText());
     }
 
     private void Update()

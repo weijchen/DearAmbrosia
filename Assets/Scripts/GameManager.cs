@@ -23,9 +23,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Ball prince;
     [SerializeField] private ConnectFlower[] rightMazeWall;
 
-    [Header("Love Letter Text")] 
+    [Header("Ending Animation Text")] 
     [SerializeField] private TypeStyleTextForDialog _loveLetterTextPrince;
     [SerializeField] private TypeStyleTextForDialog _loveLetterTextPrincess;
+    [SerializeField] private TypeStyleTextForDialog _chocolatesTextPrince;
+    [SerializeField] private TypeStyleTextForDialog _chocolatesTextPrincess;
+    [SerializeField] private TypeStyleTextForDialog _rosesTextPrince;
+    [SerializeField] private TypeStyleTextForDialog _rosesTextPrincess;
     [SerializeField] private FlowerWall leftFlowerWall;
     
     private int giftCollected = 0;
@@ -82,7 +86,6 @@ public class GameManager : MonoBehaviour
         giftCollected += 1;
         if (giftCollected == targetGiftToCollect)
         {
-            Debug.Log("collect all!");
             leftFlowerWall.ScaleUpFlower();
             
             foreach (ConnectFlower wall in rightMazeWall)
@@ -112,13 +115,21 @@ public class GameManager : MonoBehaviour
         } else if (selection == 1)
         {
             StartCoroutine(AudioFadeScript.FadeOut(bgmManager, audioFadeOutTime));
-            audioManager.clip = loveLetterSceneClip;
+            audioManager.clip = chocolateSceneClip;
+            mainItem.SetActive(false);
+            prince.gameObject.SetActive(false);
+            _chocolatesTextPrince.StartTextDialog();
+            _chocolatesTextPrincess.StartTextDialog();
             StartCoroutine(AudioFadeScript.FadeIn(audioManager, audioFadeInTime));
         }
         else
         {
             StartCoroutine(AudioFadeScript.FadeOut(bgmManager, audioFadeOutTime));
-            audioManager.clip = loveLetterSceneClip;
+            audioManager.clip = roseSceneClip;
+            mainItem.SetActive(false);
+            prince.gameObject.SetActive(false);
+            _rosesTextPrince.StartTextDialog();
+            _rosesTextPrincess.StartTextDialog();
             StartCoroutine(AudioFadeScript.FadeIn(audioManager, audioFadeInTime));
         }
     }

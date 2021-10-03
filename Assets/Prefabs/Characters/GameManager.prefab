@@ -77,6 +77,10 @@ MonoBehaviour:
   - {fileID: 0}
   _loveLetterTextPrince: {fileID: 0}
   _loveLetterTextPrincess: {fileID: 0}
+  _chocolatesTextPrince: {fileID: 0}
+  _chocolatesTextPrincess: {fileID: 0}
+  _rosesTextPrince: {fileID: 0}
+  _rosesTextPrincess: {fileID: 0}
   leftFlowerWall: {fileID: 0}
   keyGot: 0
   keyVisible: 0

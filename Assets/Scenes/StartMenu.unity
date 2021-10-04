@@ -363,6 +363,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 188523738}
+  - component: {fileID: 188523739}
   m_Layer: 0
   m_Name: StartAnimation
   m_TagString: Untagged
@@ -386,6 +387,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &188523739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188523737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2547b4dd088644d6aaf64f45df657c79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivotAxis: 1
+  targetTransform: {fileID: 0}
 --- !u!1 &200215222
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,11 +1422,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPosition: {fileID: 1762324706}
---- !u!1 &608242409 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1381522619188222688, guid: 9b40512a23c89d44ca1621fd4b121647, type: 3}
-  m_PrefabInstance: {fileID: 2688103078806006489}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &611373613
 GameObject:
   m_ObjectHideFlags: 0
@@ -2363,6 +2373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prologue Animation
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5f9d7f9092724ef468f7c8f1b704bdf1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2955508504182598500, guid: 5f9d7f9092724ef468f7c8f1b704bdf1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 10.286459
@@ -2424,10 +2438,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0a68e2437448b498a00e5453237fef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startAnim: {fileID: 188523737}
-  playBoard: {fileID: 302471153}
-  player: {fileID: 608242409}
-  bgm: {fileID: 8300000, guid: 324be35f28c47a649803248e6e09d852, type: 3}
+  _startAnim: {fileID: 188523737}
+  _playBoard: {fileID: 302471153}
+  _player: {fileID: 1783099215}
+  _bgm: {fileID: 8300000, guid: 324be35f28c47a649803248e6e09d852, type: 3}
   _audioSource: {fileID: 1972883919}
 --- !u!82 &1313851426
 AudioSource:
@@ -3176,6 +3190,11 @@ Transform:
   m_Father: {fileID: 302471159}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1783099215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1381522619188222688, guid: 9b40512a23c89d44ca1621fd4b121647, type: 3}
+  m_PrefabInstance: {fileID: 2688103078806006489}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1850449132
 GameObject:
   m_ObjectHideFlags: 0
@@ -3191,6 +3210,8 @@ GameObject:
   - component: {fileID: 1850449134}
   - component: {fileID: 1850449133}
   - component: {fileID: 1850449139}
+  - component: {fileID: 1850449140}
+  - component: {fileID: 1850449141}
   m_Layer: 0
   m_Name: StartButton
   m_TagString: Untagged
@@ -3205,7 +3226,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850449132}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 181cd563a8349c34ea8978b0bc8d9c7e, type: 3}
   m_Name: 
@@ -3364,6 +3385,39 @@ MonoBehaviour:
   - {fileID: 2073593593}
   _animator: {fileID: 1313851427}
   _audioSource: {fileID: 1972883919}
+--- !u!114 &1850449140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850449132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2547b4dd088644d6aaf64f45df657c79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivotAxis: 0
+  targetTransform: {fileID: 0}
+--- !u!114 &1850449141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850449132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c748f3768ab714a8449b60fb9edc5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventsToReceive: 0
+  debounceThreshold: 0.01
+  localForward: {x: -0, y: -0, z: -1}
+  localUp: {x: 0, y: 1, z: 0}
+  localCenter: {x: 0, y: 0, z: -0.5}
+  bounds: {x: 1, y: 1}
+  touchableCollider: {fileID: 1850449135}
 --- !u!1 &1881516186
 GameObject:
   m_ObjectHideFlags: 0
@@ -4382,7 +4436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullTexts:
-  - I have a little work to do. You know this.
+  - I have a lot of work to do. You know this.
   - Unbelievable...
   - Fine...I'll make it up to you...
   - 
@@ -4567,7 +4621,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3918738617743978560, guid: 9b40512a23c89d44ca1621fd4b121647, type: 3}
   m_PrefabInstance: {fileID: 2688103078806006489}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608242409}
+  m_GameObject: {fileID: 1783099215}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09a7da15d4a3b14458ac5cb6ffd1edb2, type: 3}

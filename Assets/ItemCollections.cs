@@ -7,8 +7,6 @@ public class ItemCollections : MonoBehaviour
 {
     [SerializeField] [Range(0, 2)] private int endingAnimSelection;
     [SerializeField] private GameObject epilogueAnimObj;
-    [SerializeField] private AudioClip _endingClip;
-    [SerializeField] private AudioSource _audioSource;
     [SerializeField] private GameObject princess;
 
     private GameManager _gameManager;
@@ -23,7 +21,6 @@ public class ItemCollections : MonoBehaviour
     {
         epilogueAnimObj.SetActive(true);
         _gameManager.ShowEndingAnim(endingAnimSelection);
-        // _audioSource.PlayOneShot(_endingClip);
         princess.SetActive(false);
     }
 }

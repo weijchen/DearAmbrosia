@@ -9,6 +9,7 @@ public class EpilogueAnimLoveLetter : MonoBehaviour
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private GameObject _endAnim;
     [SerializeField] private GameObject _credits;
+    [SerializeField] private float creditOpenTime = 1.0f;
 
     public void EpilogueAnimationLoveLetterObserver(string message)
     {
@@ -25,8 +26,13 @@ public class EpilogueAnimLoveLetter : MonoBehaviour
         if (message.Equals("EpilogueAnimationEnded"))
         {
             Debug.Log("Game Over & Show Credits");
-            _endAnim.SetActive(false);
-            _credits.SetActive(true);
+            Invoke("OpenCredit", creditOpenTime);
         }
+    }
+    
+    private void OpenCredit()
+    {
+        _endAnim.SetActive(false);
+        _credits.SetActive(true);
     }
 }

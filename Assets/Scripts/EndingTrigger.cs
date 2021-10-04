@@ -21,30 +21,4 @@ public class EndingTrigger : MonoBehaviour
         ChocolateObject.SetActive(false);
         RoseObject.SetActive(false);
     }
-
-    // private void OnTriggerEnter(Collider other)
-    // {
-    //     if (other.gameObject.tag == "LoveLetter")
-    //     {
-    //         Debug.Log("LoveLetter Received");
-    //         _audioSource.PlayOneShot(_HEClip);
-    //         LoveLetterObject.SetActive(true);
-    //         _gameManager.ShowEndingAnim(0);
-    //     }
-    //     else if (other.gameObject.tag == "Chocolate")
-    //     {
-    //         Debug.Log("Chocolate Received");
-    //         _audioSource.PlayOneShot(_BEClip);
-    //         ChocolateObject.SetActive(true);
-    //         _gameManager.ShowEndingAnim(1);
-    //
-    //     }
-    //     else if (other.gameObject.tag == "Rose")
-    //     {
-    //         Debug.Log("Rose Received");
-    //         _audioSource.PlayOneShot(_HEClip);
-    //         RoseObject.SetActive(true);
-    //         _gameManager.ShowEndingAnim(2);
-    //     }
-    // }
 }

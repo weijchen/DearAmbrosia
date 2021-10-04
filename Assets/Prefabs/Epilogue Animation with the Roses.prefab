@@ -58,11 +58,11 @@ MonoBehaviour:
   textDisplay: {fileID: 199862276353269620}
   wordDelay: 0.05
   startDelay: 0
-  midDelay: 6
+  midDelay: 5
   endDelay: 2
   hasEndingDialog: 1
   dialogObject: {fileID: 199862276353269620}
-  dialogDeleteAfterSecond: 10
+  dialogDeleteAfterSecond: 11
 --- !u!65 &199862274741717537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -391,12 +391,12 @@ MonoBehaviour:
   - END
   textDisplay: {fileID: 199862276440607410}
   wordDelay: 0.06
-  startDelay: 5
+  startDelay: 4
   midDelay: 1
-  endDelay: 2
+  endDelay: 2.5
   hasEndingDialog: 1
   dialogObject: {fileID: 199862276440607410}
-  dialogDeleteAfterSecond: 10
+  dialogDeleteAfterSecond: 11
 --- !u!65 &199862275115829573
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7381,7 +7381,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8707616818599195344
 Transform:
   m_ObjectHideFlags: 0
@@ -7441,6 +7441,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particleSystem: {fileID: 4394050398414754043}
+  _endingClip: {fileID: 8300000, guid: d876a3d79d2a2f04cb270e83f1b15ce4, type: 3}
+  _audioSource: {fileID: 0}
+  _endAnim: {fileID: 0}
+  _credits: {fileID: 0}
+  creditOpenTime: 1
 --- !u!1 &8355334982138882805
 GameObject:
   m_ObjectHideFlags: 0

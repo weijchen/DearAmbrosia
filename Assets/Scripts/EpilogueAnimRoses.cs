@@ -8,7 +8,8 @@ public class EpilogueAnimRoses : MonoBehaviour
     [SerializeField] private AudioClip _endingClip;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private GameObject _endAnim;
-    [SerializeField] private GameObject _credit;
+    [SerializeField] private GameObject _credits;
+    [SerializeField] private float creditOpenTime = 1.0f;
 
     public void EpilogueAnimationRosesObserver(string message)
     {
@@ -26,7 +27,12 @@ public class EpilogueAnimRoses : MonoBehaviour
         {
             Debug.Log("End");
             _endAnim.SetActive(false);
-            _credit.SetActive(true);
+            Invoke("OpenCredit", creditOpenTime);
         }
+    }
+    
+    private void OpenCredit()
+    {
+        _credits.SetActive(true);
     }
 }

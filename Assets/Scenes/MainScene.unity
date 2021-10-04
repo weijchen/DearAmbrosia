@@ -6658,7 +6658,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208576703}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2577, y: 0.1226, z: -0.052}
+  m_LocalPosition: {x: 0.0923, y: 0.1226, z: -0.052}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 998042341}
@@ -6735,8 +6735,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.059934437, y: 0.032786727, z: 0.04065953}
-  m_Center: {x: -0.0010671675, y: 0.0025122769, z: -0.001670739}
+  m_Size: {x: 0.0453369, y: 0.01325233, z: 0.04065953}
+  m_Center: {x: -0.0019897425, y: 0.00036656857, z: -0.001670739}
 --- !u!114 &208576713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6753,8 +6753,8 @@ MonoBehaviour:
   debounceThreshold: 0.01
   localForward: {x: -0, y: -0, z: -1}
   localUp: {x: 0, y: 1, z: 0}
-  localCenter: {x: -0.0010671675, y: 0.0025122769, z: -0.022000503}
-  bounds: {x: 0.059934437, y: 0.032786727}
+  localCenter: {x: -0.0019897425, y: 0.00036656857, z: -0.022000503}
+  bounds: {x: 0.0453369, y: 0.01325233}
   touchableCollider: {fileID: 208576712}
 --- !u!1 &218137133
 GameObject:
@@ -17182,8 +17182,8 @@ MonoBehaviour:
   debounceThreshold: 0.01
   localForward: {x: -0, y: -0, z: -1}
   localUp: {x: 0, y: 1, z: 0}
-  localCenter: {x: -0.06626864, y: -0.0011463943, z: -0.16996151}
-  bounds: {x: 0.044123515, y: 0.061693247}
+  localCenter: {x: -0.069491595, y: -0.0006419079, z: -0.15386234}
+  bounds: {x: 0.014431487, y: 0.032541677}
   touchableCollider: {fileID: 1735635916}
 --- !u!65 &1735635916
 BoxCollider:
@@ -17196,8 +17196,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.044123515, y: 0.061693247, z: 0.046185154}
-  m_Center: {x: -0.06626864, y: -0.0011463943, z: -0.14686893}
+  m_Size: {x: 0.014431487, y: 0.032541677, z: 0.011784146}
+  m_Center: {x: -0.069491595, y: -0.0006419079, z: -0.14797027}
 --- !u!114 &1735635918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17469,7 +17469,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871142207}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0148, y: 0.1183, z: 0.0788}
+  m_LocalPosition: {x: 0.16, y: 0.1183, z: 0.0788}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 672741029}
@@ -17492,8 +17492,8 @@ MonoBehaviour:
   debounceThreshold: 0.01
   localForward: {x: -0, y: -0, z: -1}
   localUp: {x: 0, y: 1, z: 0}
-  localCenter: {x: 0.07653139, y: 0.0071576624, z: -0.16270947}
-  bounds: {x: 0.067508034, y: 0.052646812}
+  localCenter: {x: 0.07977215, y: 0.00489049, z: -0.14071624}
+  bounds: {x: 0.030524714, y: 0.023542548}
   touchableCollider: {fileID: 1871142210}
 --- !u!65 &1871142210
 BoxCollider:
@@ -17506,8 +17506,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.067508034, y: 0.052646812, z: 0.07375908}
-  m_Center: {x: 0.07653139, y: 0.0071576624, z: -0.12582994}
+  m_Size: {x: 0.030524714, y: 0.023542548, z: 0.030656695}
+  m_Center: {x: 0.07977215, y: 0.00489049, z: -0.12538789}
 --- !u!114 &1871142211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23403,7 +23403,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149466925158}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.01, y: -0.47460005, z: 0.517}
+  m_LocalPosition: {x: 0.01, y: -0.5486001, z: 0.517}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 661721276}
@@ -37983,7 +37983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3862247030415480397, guid: 9b40512a23c89d44ca1621fd4b121647, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.426
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3862247030415480397, guid: 9b40512a23c89d44ca1621fd4b121647, type: 3}
       propertyPath: m_LocalPosition.z
@@ -65065,7 +65065,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6560753959388008195}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.09482643, y: -0.0599, z: 0.0499555}
+  m_LocalPosition: {x: -0.09482643, y: -0.0599, z: -0.0913}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 208576704}

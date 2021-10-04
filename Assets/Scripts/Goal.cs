@@ -7,6 +7,7 @@ public class Goal : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _meetAudioClip;
+    [SerializeField] private AudioClip _giftShowedAudioClip;
     [SerializeField] private Transform spawnPosition;
     [SerializeField] private GameObject prizes;
     [SerializeField] private GameObject player;
@@ -31,6 +32,7 @@ public class Goal : MonoBehaviour
                 _audioSource.PlayOneShot(_meetAudioClip);
             }
             _safeZone.SetRespawnPosition(spawnPosition);
+            _audioSource.PlayOneShot(_giftShowedAudioClip);
             prizes.SetActive(true);
             environment.SetActive(false);
             player.SetActive(false);

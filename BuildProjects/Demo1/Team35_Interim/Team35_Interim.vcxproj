@@ -162,6 +162,9 @@
   <ItemGroup>
     <SDKReference Include="WindowsMobile, Version=10.0.19041.0" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.md" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Import Project="Unity Data.vcxitems" Label="Unity Data" />
   <ImportGroup Label="ExtensionTargets">

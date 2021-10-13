@@ -8,7 +8,7 @@
   - Programmers: Wei-Cheng Chen (Me), Jialu Sun
   - Arts: Ruizi Wang, Hagan Miller
   - Sounds: Sharon Liu
-- Introduction: In this game, we create a tilting board game which allows players to control the main character (a marble prince) by adjusting the angle and inclination of the board. To increase our game's scope, we design the board as a two-part maze. Inside the maze, the player can collect different items and try to find the princess. Furthermore, the storyline of our game is to win the princess heart back by selecting the right gift after discovering the princess.
+- Introduction: In this game, we create a tilting board game which allows players to control the main character (a marble prince) by adjusting the angle and inclination of the board. To increase our game's scope, we design the board as a two-part maze. Inside the maze, the player can collect different items and try to find the princess. Furthermore, the storyline of our game is to win the princess heart back by selecting the right gift after discovered the princess.
 
 # Notable Contributions
 1. Implemented grabbing and tilting system with Unity 3D and Microsoft's [Mixed Reality Toolkit](https://github.com/microsoft/MixedRealityToolkit-Unity)

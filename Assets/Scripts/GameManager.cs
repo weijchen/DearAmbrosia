@@ -31,6 +31,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TypeStyleTextForDialog _rosesTextPrince;
     [SerializeField] private TypeStyleTextForDialog _rosesTextPrincess;
     [SerializeField] private FlowerWall leftFlowerWall;
+
+    [SerializeField] private GameObject[] Handle;
+    [SerializeField] private GameObject HandleCollider;
     
     private int giftCollected = 0;
     private int targetGiftToCollect = 3;
@@ -47,6 +50,7 @@ public class GameManager : MonoBehaviour
         keyVisible = false;
         key.SetActive(false);
         audioManager = GetComponent<AudioSource>();
+        Handle = GameObject.FindGameObjectsWithTag("Handle");
     }
     void Update()
     {
@@ -55,6 +59,25 @@ public class GameManager : MonoBehaviour
         if (giftCollected == targetGiftToCollect)
         {
             CollectAllGift();
+        }
+    }
+
+    public void HideHandle()
+    {
+        for (int i = 0; i < Handle.Length; i++)
+        {
+            Handle[i].GetComponent<MeshRenderer>().enabled = false;
+            HandleCollider.GetComponent<CapsuleCollider>().enabled = false;
+        }
+    }
+
+    public IEnumerator ShowHandle()
+    {
+        yield return new WaitForSeconds(3f);
+        for (int i = 0; i < Handle.Length; i++)
+        {
+            Handle[i].GetComponent<MeshRenderer>().enabled = true;
+            HandleCollider.GetComponent<CapsuleCollider>().enabled = true;
         }
     }
 

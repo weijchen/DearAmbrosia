@@ -29,12 +29,13 @@ public class Goal : MonoBehaviour
         {
             if (clipPlayCount < clipPlayMaxCount)
             {
-                _audioSource.PlayOneShot(_meetAudioClip);
+                _audioSource.clip = _meetAudioClip;
+                _audioSource.Play();
             }
             _safeZone.SetRespawnPosition(spawnPosition);
             _audioSource.PlayOneShot(_giftShowedAudioClip);
             prizes.SetActive(true);
-            environment.SetActive(false);
+            //environment.SetActive(false);
             player.SetActive(false);
             clipPlayCount += 1;
         }

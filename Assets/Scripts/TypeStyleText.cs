@@ -43,6 +43,7 @@ public class TypeStyleText : MonoBehaviour
             }
         }
         isPlaying = false;
+        StartCoroutine(_gameManager.ShowHandle());
         Destroy(gameObject.transform.parent.gameObject, destroyAfterSeconds);
     }
 }

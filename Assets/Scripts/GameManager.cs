@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject mainItem;
     [SerializeField] private Ball prince;
     [SerializeField] private ConnectFlower[] rightMazeWall;
+    [SerializeField] private GameObject[] Handle;
+    [SerializeField] private GameObject HandleCollider;
 
     [Header("Ending Animation Text")] 
     [SerializeField] private TypeStyleTextForDialog _loveLetterTextPrince;
@@ -32,9 +34,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TypeStyleTextForDialog _rosesTextPrincess;
     [SerializeField] private FlowerWall leftFlowerWall;
 
-    [SerializeField] private GameObject[] Handle;
-    [SerializeField] private GameObject HandleCollider;
-    
     private int giftCollected = 0;
     private int targetGiftToCollect = 3;
     private int endingSelection = 0;

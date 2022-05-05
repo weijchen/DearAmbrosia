@@ -9,6 +9,7 @@ public class EpilogueAnimLoveLetter : MonoBehaviour
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private GameObject _endAnim;
     [SerializeField] private GameObject _credits;
+    [SerializeField] private GameObject _restartButton;
     [SerializeField] private float creditOpenTime = 1.0f;
 
     public void EpilogueAnimationLoveLetterObserver(string message)
@@ -34,5 +35,6 @@ public class EpilogueAnimLoveLetter : MonoBehaviour
     {
         _endAnim.SetActive(false);
         _credits.SetActive(true);
+        _restartButton.SetActive(true);
     }
 }

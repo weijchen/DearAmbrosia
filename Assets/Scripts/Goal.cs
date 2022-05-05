@@ -16,11 +16,13 @@ public class Goal : MonoBehaviour
 
     private int clipPlayCount = 0;
     private SafeZone _safeZone;
+    private GameManager _gameManager;
 
     private void Start()
     {
         prizes.SetActive(false);
         _safeZone = FindObjectOfType<SafeZone>();
+        _gameManager = FindObjectOfType<GameManager>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,12 +31,14 @@ public class Goal : MonoBehaviour
         {
             if (clipPlayCount < clipPlayMaxCount)
             {
-                _audioSource.PlayOneShot(_meetAudioClip);
+                _audioSource.clip = _meetAudioClip;
+                _audioSource.Play();
             }
             _safeZone.SetRespawnPosition(spawnPosition);
             _audioSource.PlayOneShot(_giftShowedAudioClip);
+            _gameManager.HideHandle();
             prizes.SetActive(true);
-            environment.SetActive(false);
+            //environment.SetActive(false);
             player.SetActive(false);
             clipPlayCount += 1;
         }

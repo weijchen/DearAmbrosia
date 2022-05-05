@@ -7,6 +7,7 @@ TagManager:
   - LoveLetter
   - Chocolate
   - Rose
+  - Handle
   layers:
   - Default
   - TransparentFX

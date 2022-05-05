@@ -23,7 +23,7 @@ public class PrologueObject : MonoBehaviour
         {
             _startAnim.SetActive(false);
             _playBoard.SetActive(true);
-            _player.SetActive(true);
+            //_player.SetActive(true);
             _audioSource.PlayOneShot(_bgm);
         }
     }
